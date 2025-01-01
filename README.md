@@ -42,18 +42,18 @@ public:
 // 函數: 選擇角色類型
 Character selectCharacter() {
     cout << "\n選擇角色類型: " << endl;
-    cout << "1. Guardian (高防禦, 中攻擊, 中生命值)" << endl;
+    cout << "1. Defender (高防禦, 中攻擊, 中生命值)" << endl;
     cout << "2. Admiral (高攻擊, 中防禦, 中生命值)" << endl;
     int choice;
     cin >> choice;
 
     if (choice == 1) {
-        return Character("Guardian", 120, 40, 40);
+        return Character("Defender", 120, 40, 40);
     } else if (choice == 2) {
         return Character("Admiral", 80, 60, 20);
     } else {
-        cout << "無效選擇，預設為 Guardian。" << endl;
-        return Character("Guardian", 160, 50, 30);
+        cout << "無效選擇，預設為 Defender。" << endl;
+        return Character("Defender", 160, 50, 30);
     }
 }
 
@@ -127,7 +127,7 @@ int main() {
         turn++;
     }
 
-    // 判定10回合後的勝負
+    // 判定6回合後的勝負
     if (turn > 6 && dragon.health > 0 && player.health > 0) {
         cout << "\n戰鬥結束，但你未能在6回合內擊敗 " << dragon.name << "。你失敗了。" << endl;
     }
