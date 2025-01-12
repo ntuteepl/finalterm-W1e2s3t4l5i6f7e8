@@ -48,7 +48,7 @@ Character selectCharacter() {
     cin >> choice;
 
     if (choice == 1) {
-        return Character("Defender", 120, 40, 40);
+        return Character("Defender", 120, 40, 30);
     } else if (choice == 2) {
         return Character("Admiral", 80, 60, 20);
     } else {
@@ -94,7 +94,7 @@ int main() {
             player.defense += 20; // 提高防禦
         } else if (action == 3) {
             // 回復
-            int heal = 60;
+            int heal = 50;
             player.health += heal;
             if (player.health > 300) player.health = 300; // 最大生命值限制
             cout << "你回復了 " << heal << " 點生命值。" << endl;
@@ -134,3 +134,4 @@ int main() {
 
     return 0;
 }
+
